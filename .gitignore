@@ -4,4 +4,9 @@
 *.tfplan
 crash.log
 crash.*.log
-.terraform.lock.hcl
+
+# Local Terraform variable files
+*.tfvars
+
+# Keep example variable files in Git
+!*.tfvars.example

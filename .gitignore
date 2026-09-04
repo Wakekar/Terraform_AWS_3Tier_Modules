@@ -12,3 +12,4 @@ crash.*.log
 !*.tfvars.example
 tfplan
 tfplan
+tfplan

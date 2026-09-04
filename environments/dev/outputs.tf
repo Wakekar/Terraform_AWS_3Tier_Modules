@@ -53,3 +53,33 @@ output "database_address" {
 output "database_port" {
   value = module.database.db_port
 }
+
+
+output "eks_cluster_name" {
+  description = "EKS cluster name"
+  value       = module.eks.cluster_name
+}
+
+output "eks_cluster_endpoint" {
+  description = "EKS cluster API endpoint"
+  value       = module.eks.cluster_endpoint
+}
+
+output "eks_cluster_version" {
+  description = "EKS Kubernetes version"
+  value       = module.eks.cluster_version
+}
+
+output "eks_node_group_name" {
+  description = "EKS managed node group name"
+  value       = module.eks.node_group_name
+}
+
+output "eks_oidc_issuer" {
+  description = "EKS OIDC issuer"
+  value       = module.eks.oidc_issuer
+}
+
+
+
+

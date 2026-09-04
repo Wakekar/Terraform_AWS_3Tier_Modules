@@ -10,3 +10,5 @@ crash.*.log
 
 # Keep example variable files in Git
 !*.tfvars.example
+tfplan
+tfplan

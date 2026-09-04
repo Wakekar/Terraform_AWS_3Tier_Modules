@@ -170,3 +170,33 @@ module "database" {
 
   tags = var.tags
 }
+
+
+module "eks" {
+  source = "../../modules/eks"
+
+  name               = "myproject-dev-eks"
+  environment        = "dev"
+  kubernetes_version = "1.33"
+
+  subnet_ids = module.vpc.app_subnet_ids
+
+  node_instance_types = ["c7i-flex.large"]
+
+  capacity_type = "ON_DEMAND"
+
+  desired_nodes = 2
+  min_nodes     = 2
+  max_nodes     = 4
+
+  node_disk_size = 30
+
+  tags = {
+    Project     = "MyProject"
+    Environment = "dev"
+    ManagedBy   = "Terraform"
+  }
+}
+
+
+

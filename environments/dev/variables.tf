@@ -114,3 +114,11 @@ variable "db_backup_retention_period" {
 variable "tags" {
   type = map(string)
 }
+
+variable "environment" {
+  description = "Environment name"
+  type        = string
+}
+
+
+
